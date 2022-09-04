@@ -22,3 +22,15 @@ div {
   text-align: center;
   vertical-align: middle;
 }
+
+.standard {
+  background-color: aqua;
+}
+.x {
+  color: black;
+  font-weight: 350;
+}
+.o {
+  color: black;
+  font-weight: 350;
+}
