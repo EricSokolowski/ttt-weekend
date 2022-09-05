@@ -81,22 +81,22 @@ function boardRender(){
 
 function messageRender(){
   if (turn === 1) {
-    messageEl.textContent = 'X Turn'
+    messageEl.textContent = `Player X's Turn`
   }
   if (turn === -1) {
-    messageEl.textContent = 'O Turn'
+    messageEl.textContent = `Player O's Turn`
   }
 }
 
 function winnerRender(){
   if (winner === 1){
-    messageEl.textContent = 'Congrats Player O'
+    messageEl.textContent = 'Congrats Player O!'
   }
   if (winner === -1){
-    messageEl.textContent = 'Congrats Player X'
+    messageEl.textContent = 'Congrats Player X!'
   }
   if (winner === 'T') {
-    messageEl.textContent = 'Game is Scratch'
+    messageEl.textContent = 'Game is Scratch!'
   }
 }
 
