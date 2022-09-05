@@ -90,10 +90,10 @@ function messageRender(){
 
 function winnerRender(){
   if (winner === 1){
-    messageEl.textContent = 'Congrats Player O!'
+    messageEl.textContent = 'Congratulations Player O!'
   }
   if (winner === -1){
-    messageEl.textContent = 'Congrats Player X!'
+    messageEl.textContent = 'Congratulations Player X!'
   }
   if (winner === 'T') {
     messageEl.textContent = 'Game is Scratch!'
