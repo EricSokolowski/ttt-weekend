@@ -10,12 +10,14 @@ let board, turn, winner
 /*------------------------ Cached Element References ------------------------*/
 const squareEls = [(sq0 = document.getElementById('sq0')), (sq1 = document.getElementById('sq1')), (sq2 = document.getElementById('sq2')), (sq3 = document.getElementById('sq3')), (sq4 = document.getElementById('sq4')), (sq5 = document.getElementById('sq5')), (sq6 = document.getElementById('sq6')), (sq7 = document.getElementById('sq7')), (sq8 = document.getElementById('sq8')),]
 const messageEl = document.getElementById('message')
+const resetBtnEl = document.getElementById('reset-button')
 
 /*----------------------------- Event Listeners -----------------------------*/
 squareEls.forEach(function(square){
     square.addEventListener('click', handleClick)
 })
 
+resetBtnEl.addEventListener('click', reset)
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -33,12 +35,12 @@ function handleClick({target: {id}}){
     if (board[sqIdx] !== null) return 
       board[sqIdx] = turn
       turn *= -1
-      checkWinner() 
+      getWinner() 
       render()
   }
 }
 
-function checkWinner() {
+function getWinner() {
   // sum = if  all 3 spots on board have a value of 1 aka sum of 3 winner = 1
   // if -3 winner = 1
   //if !board.includes null and winner !== 1 or -1 winner = T
@@ -97,4 +99,9 @@ function winnerRender(){
     messageEl.textContent = 'Game is Scratch'
   }
 }
+
+function reset () {
+  init()
+}
+
 init()

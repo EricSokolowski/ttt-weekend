@@ -14,6 +14,8 @@ section.board {
   grid-template-rows: repeat(3, 10vmin);
   grid-template-columns: repeat(3, 10vmin);
   grid-gap: 0vmin;
+  margin:auto;
+  margin-top: 100px;
 }
 
 div {
@@ -33,4 +35,10 @@ div {
 .o {
   color: black;
   font-weight: 350;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
 }
